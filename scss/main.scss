@@ -1,10 +1,11 @@
 @import "config";
+@import "menu";
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include background();
+  @include background;
   background: $primary-color;
   color: white;
   height: 100%;
@@ -28,7 +29,7 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(
       lighten($primary-color, 2),
-      0.5
+      0.4
     ); //func ligthen -makes lighter, rgba (red,green,blue,alpfa -where alpha means opasity)
   }
 }
@@ -63,7 +64,7 @@ main {
         // the same as a:hover {}
         color: $secondary-color;
         //transition: all 1.5s ease-in-out;  the same as =>
-        @include easeOut();
+        @include easeOut;
       }
     }
   }
