@@ -45,6 +45,16 @@
       height: 150px;
     }
   }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
@@ -53,6 +63,19 @@
   main#home h1 {
     margin-top: 10vh;
     font-size: 4.5rem;
-    margin-right: 20vh;
+
+    text-align: center;
+    align-items: center;
   }
 }
+
+/* @include mediaXs //{
+  main#home h1 .show {
+    margin-top: 10vh;
+    font-size: 2rem;
+    margin-right: 20vh;
+    text-align: center;
+    align-items: center;
+  }
+}
+*/

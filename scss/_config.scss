@@ -1,4 +1,4 @@
-$primary-color: rgb(60, 53, 61);
+$primary-color: rgb(41, 38, 43);
 $secondary-color: #37855c;
 $show-home-image: true;
 $home-image: url("/img/pexels-photo-920534.jpeg");
@@ -30,7 +30,21 @@ $background-opacity: 0.5;
   }
 }
 
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // Media Query Mixins
+@mixin mediaXs {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;
