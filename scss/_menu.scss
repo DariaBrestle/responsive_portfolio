@@ -35,3 +35,103 @@
     }
   }
 }
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+    opacity: 0.9;
+
+    &.show {
+      // Slide in from the top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  //Branding Side
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    opacity: 0.9;
+
+    @include easeOut;
+
+    &.show {
+      // Slide in from the bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 350px;
+      height: 350px;
+      background: url("/img/IMG_1143.JPG");
+
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 5px $secondary-color;
+      opacity: 5;
+      z-index: 5;
+    }
+  }
+
+  .nav-item {
+    // Move out to the right
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from the right
+      transform: translate3d(0, 0, 0);
+    }
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0; //  1 top and bottom
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+  }
+  a:hover {
+    color: $secondary-color;
+    @include easeOut;
+  }
+}
+
+// Delay each nav item slide by 0.1seconds  // for(let x = 0; i<4; i++)
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}

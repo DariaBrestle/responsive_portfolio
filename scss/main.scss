@@ -23,6 +23,10 @@ h3 {
   &.lg-heading {
     // the same as h1 .lg-heading outside
     font-size: 6rem;
+    &.shoow {
+      opacity: 0;
+      @include easeOut;
+    }
   }
   &.sm-heading {
     margin-bottom: 2rem;
@@ -31,6 +35,10 @@ h3 {
       lighten($primary-color, 2),
       0.4
     ); //func ligthen -makes lighter, rgba (red,green,blue,alpfa -where alpha means opasity)
+    &.shoow {
+      opacity: 0;
+      @include easeOut;
+    }
   }
 }
 
@@ -66,6 +74,10 @@ main {
         //transition: all 1.5s ease-in-out;  the same as =>
         @include easeOut;
       }
+    }
+    &.shoow {
+      opacity: 0;
+      @include easeOut;
     }
   }
   &#home {
