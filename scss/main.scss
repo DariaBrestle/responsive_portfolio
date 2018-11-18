@@ -146,6 +146,34 @@ main#about {
   }
 }
 
+// Contact me page
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap; // when boxes dont fit on the screen they go to the next line
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 3px white solid;
+    padding: 2.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+    &:hover {
+      padding: 2.5rem 1.5rem;
+      border: 2px;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
 // Button Styles
 .btn {
   display: block;
