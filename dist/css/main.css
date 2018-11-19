@@ -106,7 +106,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url("/img/pexels-photo-920534.jpeg");
+    background: url("/dist/img/pexels-photo-920534.jpeg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img::after {
@@ -294,7 +294,7 @@ main#about {
     height: 35vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("/img/small.JPG");
+      background: url("/dist/img/small.JPG");
       width: 150px;
       height: 150px; }
   .about-info {
